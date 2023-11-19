@@ -1,0 +1,104 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --space-cadet: #141B41;
+    --marian-blue: #224377;
+    --yinmin-blue: #295792;
+    --green-blue: #306BAC;
+
+    --falu-red: #772014;
+    --sienna-1: #852915;
+    --sienna-2: #933216;
+    --sienna-3: #933217;
+
+    --gray-1: #2C150E;
+    --gray-2: #342018;
+    --gray-3: #44362D;
+    --gray-4: #656256;
+    --gray-5: rgb(173, 168, 179);
+
+    --orange: rgb(243, 151, 102);
+
+    --max-width: 1170px;
+    --fixed-width: 620px;
+
+    --header-height: 100vh;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: var(--space-cadet);
+    color: var(--gray-5);
+    line-height: 1.5;
+    font-size: 0.8rem;
+}
+
+.nav-header {
+    background-color: var(--orange);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+header {
+    min-height: var(--header-height);
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    margin: 10px
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--gray-5);
+}
+
+.container {
+    text-align: center;
+}
+
+.banner p {
+    font-size: 1.1rem;
+}
+
+.banner {
+    width: 80vh;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--gray-5);
+    text-align: center;
+    border: 2px solid var(--gray-5);
+    justify-content: cetner;
+}
+
+.section {
+    height: 100vh;
+    display: block;
+}
+
+.title h2 {
+    text-align: center;
+}
+
+#about {
+    background: var(--marian-blue)
+}
