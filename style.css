@@ -20,13 +20,15 @@
     --gray-3: #44362D;
     --gray-4: #656256;
     --gray-5: rgb(173, 168, 179);
+    --gray-6: #EEEEEE;
+    --gray-7: #F5F5F5;
 
     --orange: rgb(243, 151, 102);
 
     --max-width: 1170px;
     --fixed-width: 620px;
 
-    --header-height: 100vh;
+    --header-height: 3.5rem;
 }
 
 body {
@@ -37,22 +39,100 @@ body {
     font-size: 0.8rem;
 }
 
-.nav-header {
+header {
     background-color: var(--orange);
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
-}
-header {
-    min-height: var(--header-height);
-}
-
-.logo {
-    width: 100px;
-}
-
-.nav-header {
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 1rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding-left: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+
+.links a { 
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--green-blue);
+    margin-left: 2rem;
+    transition: 0.5s;
+}
+
+.links a:hover, .links a.active {
+    color: var(--gray-1);
+}
+
+#ham {
+    font-size: 1.2rem;
+    color: var(--sienna-1);
+    display: none;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: var(--header-height);
+}
+
+#home {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+.btn {
+    display: block;
+    margin: 2rem auto;
+    width: 10rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--gray-5);
+    text-align: center;
+    border: 2px solid var(--gray-5);
+    justify-content: center;
+}
+
+#about {
+    background: var(--marian-blue)
+}
+
+#contact {
+    background: var(--green-blue);
+}
+
+#products {
+    background: var(--yinmin-blue);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0.5rem 1.5rem;
 }
 
 .hamburger {
@@ -61,44 +141,77 @@ header {
     margin: 10px
 }
 
-.links a {
-    text-decoration: none;
-    color: var(--gray-5);
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px; /* Set a max-width to control the width of the grid */
 }
 
-.container {
+.product-box {
+    position: relative;
+    height: 35vh; /* Ensures the product boxes take the full height of the grid cells */
+    overflow: hidden;
+    box-shadow: 0 0 1rem var(--gray-1);
+    display: flex;
+}
+
+.product-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images cover the entire box and are cropped if needed */
+    transition: 0.3s ease;
+}
+
+.product-box img:hover {
+    transform: scale(1.1);
+}
+
+.product-box .product-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), var(--green-blue));
+    transform: translateY(100%);
+    transition: 0.3s ease;
 }
 
-.banner p {
-    font-size: 1.1rem;
+.product-box:hover .product-layer {
+    transform: translateY(0);
 }
 
-.banner {
-    width: 80vh;
-    margin: 0 auto;
+.product-layer h4 {
+    font-size: 1.2rem;
+    color: var(--gray-6);
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: var(--gray-5);
-    text-align: center;
-    border: 2px solid var(--gray-5);
-    justify-content: cetner;
+.product-layer p {
+    color: var(--gray-7);
 }
 
-.section {
-    height: 100vh;
-    display: block;
+.product-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--gray-5);
 }
 
-.title h2 {
-    text-align: center;
+.product-layer a i {
+    font-size: 1.2rem;
+    color: var(--space-cadet)
 }
 
-#about {
-    background: var(--marian-blue)
+section h2 {
+    margin: 0.5rem 0;
 }
