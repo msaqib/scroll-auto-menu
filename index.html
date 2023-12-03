@@ -4,22 +4,16 @@
         <title>Scroll menu</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@100;200;300;400;600&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="home">
+        <header>
+            <a href="#home" class="logo"><span>Gajar Soft</span></a>            
+            <i class="fa-solid fa-bars" id="ham"></i>
             <nav id="nav">
-                <div class="nav-center">
-                    <div class="nav-header">
-                        <img src="assets/gs.jpeg" alt="Logo" class="logo">
-                        <button class="hamburger">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                    </div>
-                    <div class="links-container">
                         <ul class="links">
                             <li>
-                                <a href="#home" class="scroll-link">Home</a>
+                                <a href="#home" class="scroll-link active">Home</a>
                             </li>
                             <li>
                                 <a href="#about" class="scroll-link">About</a>
@@ -31,23 +25,97 @@
                                 <a href="#contact" class="scroll-link">Contact</a>
                             </li>
                         </ul>
-                    </div>
-                </div>
+                
             </nav>
-            <div class="banner">
-                <div class="container">
-                    <h1>Scroll Nav Project</h1>
-                    <p>In this project, we create a navigation bar that shows when the user scrolls. This is done using HTML, CSS, and JavaScript.</p>
-                    <a href="#about" class="scroll-link btn btn-white">Explore products</a>
-                </div>
-            </div>
         </header>
-
+        <section id="home">
+        <div class="home-content">
+                <h1>Scroll Nav Project</h1>
+                <p>In this project, we create a navigation bar that shows when the user scrolls. This is done using HTML, CSS, and JavaScript.</p>
+                <a href="#about" class="scroll-link btn btn-white">Explore products</a>
+        </div>
+    </section>
         <section id="about" class="section">
             <div class="title">
                 <h2>About <span>us</span></h2>
+                <div class="content">
+                    <div class="aboutus">
+                        <h4>We are <span id="pros"></span></h4>
+                        <p>We are a one-stop shop for all of your IT needs. Trust us to deliver efficient solutions to your business problems. Whether you need a website, a customer relation management solution, an embedded system to control your cyber-physical systems, or a custom mobile of desktop application, we have got your six.</p>
+                    </div>
+                    <div class="image">
+                        <img src="assets/aboutus.jpeg" alt="">
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section id="products" class="section">
+            <h2>Our <span>products</span></h2>
+            <div class="products-container">
+                <div class="product-box">
+                    <img src="assets/p1.jpeg" alt="">
+                    <div class="product-layer">
+                        <h4>Embedded Systems</h4>
+                        <p>We develop systems that automate your systems</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <img src="assets/p2.jpeg" alt="">
+                    <div class="product-layer">
+                        <h4>Mobile Application Development</h4>
+                        <p>We develop mobile applications to solve your business problems</p>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <img src="assets/p3.jpeg" alt="">
+                    <div class="product-layer">
+                        <h4>Desktop Applications</h4>
+                        <p>We develop desktop based applications to have your crew working at full speed</p>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <img src="assets/p4.jpeg" alt="">
+                    <div class="product-layer">
+                        <h4>CRM Applications</h4>
+                        <p>We develop customized Customer Relationship Management systems that help keep customers satisfied</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            
+            <h2>Conctact <span>us</span></h2>
+            
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Your full name">
+                    <input type="email" placeholder="Your email address">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Your phone number">
+                    <input type="text" placeholder="Message subject">
+                </div>
+                <textarea cols="30" rows="10" placeholder="Your message text"></textarea>
+                <input type="submit" value="Send message" class="btn">
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-notice">
+                <p>&copy; 2023 All rights reserved.</p>
+            </div>
+            <div class="footer-icon">
+                <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
