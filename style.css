@@ -31,12 +31,17 @@
     --header-height: 3.5rem;
 }
 
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', 'Open Sans', sans-serif;
     background-color: var(--space-cadet);
     color: var(--gray-5);
     line-height: 1.5;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 header {
@@ -64,7 +69,7 @@ header {
 
 
 .links a { 
-    font-size: 1rem;
+    font-size: 1.7rem;
     text-decoration: none;
     color: var(--green-blue);
     margin-left: 2rem;
@@ -76,16 +81,19 @@ header {
 }
 
 #ham {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: var(--sienna-1);
+    border: 1px solid var(--sienna-1);
+    padding: 2px;
     display: none;
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 2rem;
     padding-top: var(--header-height);
 }
 
@@ -103,9 +111,47 @@ section {
 
 h2 {
     font-size: 3.2rem;
+    text-align: center;
 }
 
-.btn {
+h4 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#about h2 {
+    margin-bottom: 3rem;
+}
+#about p {
+    font-size: 1.8rem;
+}
+
+#about .title {
+    width: 100%;
+}
+
+#about .title .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+#about .title .content img {
+    width: 100%;
+}
+
+#about .aboutus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pros {
+    color: var(--sienna-3);
+}
+
+.home-content .btn {
     display: block;
     margin: 2rem auto;
     width: 10rem;
@@ -255,6 +301,8 @@ section h2 {
     border: none;
     box-shadow: 0 0 1rem var(--gray-2);
     border-radius: 0.4rem;
+    margin-top: 1rem;
+    padding: 1.2rem;
     transition: 0.5s ease;
 }
 
@@ -310,3 +358,40 @@ section h2 {
     }
 }
 
+@media only screen and (max-width: 576px) {
+    #ham {
+        display: block;
+        cursor: pointer;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--orange);
+        width: 100%;
+        border-top: 0.1rem solid var(--gray-4);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+    
+}
