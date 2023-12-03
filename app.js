@@ -40,3 +40,10 @@ ham.onclick = () => {
     ham.classList.toggle('fa-bars')
     navbar.classList.toggle('active')
 }
+
+ScrollReveal({reset: true,
+distance: '80px'
+})
+
+ScrollReveal().reveal('.aboutus, .section h2', {origin: 'top'})
+ScrollReveal().reveal('.image, .section form, .products-container', {origin: 'bottom'})
